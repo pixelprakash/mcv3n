@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './RegistrationStyles.css';
+import './registrationstyles.css';
 import imgMsiLogo from './assets/msilogo.png';
 
 function RegistrationPage() {
