@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './VenueStyles.css';
+import './Venuestyles.css';
 import imgMsiLogo from './assets/msilogo.png';
 import c11 from './assets/c11.jpg';
 import c12 from './assets/c12.webp';
