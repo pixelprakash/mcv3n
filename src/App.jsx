@@ -293,7 +293,7 @@ function App() {
           <div id="dates-section">
             <h2 className="heading2" style={{ color: '#000' }}> Important Dates </h2>
             <hr></hr>
-            <p>Abstract Submission Deadline: <span className='redd'>1st March, 2026</span> </p>
+            <p>Abstract Submission Deadline: <span className='redd'>20th March, 2026</span> </p>
             <hr></hr>
             <p>Notification of Acceptance: 1st April, 2026</p>
             <hr></hr>

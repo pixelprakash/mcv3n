@@ -7,12 +7,22 @@ import c13 from './assets/c13.webp';
 import c14 from './assets/c14.webp';
 import c15 from './assets/c15.webp';
 import c16 from './assets/c16.webp';
+import c17 from './assets/c17.webp';
+import c18 from './assets/c18.webp';
+import c19 from './assets/c19.webp';
+
+
 import c21 from './assets/c21.jpg';
 import c22 from './assets/c22.webp';
 import c23 from './assets/c23.webp';
 import c24 from './assets/c24.webp';
 import c25 from './assets/c25.webp';
 import c26 from './assets/c26.webp';
+import c27 from './assets/c27.png';
+import c28 from './assets/c28.webp';
+import c29 from './assets/c29.webp';
+import c30 from './assets/c30.webp';
+
 import gh0 from './assets/gh0.jpg';
 import gh1 from './assets/gh1.jpg';
 import gh2 from './assets/gh2.jpg';
@@ -139,14 +149,9 @@ function VenuePage() {
         <div className="venue-hero">
           <div className="venue-hero-content">
             <h2>Venue</h2>
-            <h1>IIT Hyderabad</h1>
+            <h1>Convention Center - IITH</h1>
             <p>
-              Indian Institute of Technology Hyderabad (IITH) is a premier national institute of science and technology,
-              <strong> consistently ranked among the top ten engineering institutions in India.</strong> Established in 2008, it has gained
-              global recognition for its "Fractal Academics" curriculum and its deep-rooted research collaboration with
-              Japan. The institute operates from a sprawling, architecturally iconic 576-acre permanent campus in Kandi,
-              Sangareddy. Guided by its motto "Inventing and Innovating in Technology for Humanity," IITH serves as a
-              vibrant hub for interdisciplinary education, cutting-edge research, and a thriving startup ecosystem.
+              Located within the prestigious Indian Institute of Technology Hyderabad (IITH) — a top-ranked engineering institute known for its Fractal Academics and global research collaborations — the Convention Centre offers a world-class setting for conferences, workshops, and grand events.”
             </p>
           </div>
 

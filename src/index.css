@@ -186,6 +186,19 @@ a {
   box-shadow: 0 4px 8px rgba(0, 255, 51, 0.3);
 }
 
+/* Ensure text is always visible on registration page */
+.register-btn-nav.nav-link-active,
+.mobile-nav-link-active.register-btn-nav {
+  background: #00FF33;
+  color: #000 !important;
+  font-weight: 600;
+}
+
+/* Remove the green underline for register button */
+.register-btn-nav.nav-link-active::after {
+  display: none;
+}
+
 .cool-btn {
   position: relative;
   display: inline-flex;
@@ -268,32 +281,60 @@ a {
   display: flex;
   width: 100%;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 2em;
+  padding: 0 1.5em;
+}
+
+@media (min-width: 768px) {
+  .orgbox {
+    padding: 0 3em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .orgbox {
+    padding: 0 5em;
+  }
+}
+
+@media (min-width: 1400px) {
+  .orgbox {
+    padding: 0 7.5em;
+  }
 }
 
 .orgimgcontainer {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2em;
   width: 100%;
-  max-width: 1400px;
-  align-items: stretch;
-  justify-content: center;
 }
 
 .orgimg {
-  flex: 1 1 calc(33.333% - 2em);
-  min-width: 280px;
-  max-width: 400px;
+  width: 100%;
   height: 160px;
   display: flex;
-  padding: 30px;
+  padding: 20px;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
   background: #ffff;
   overflow: hidden;
+}
+
+@media (min-width: 1200px) {
+  .orgimg {
+    height: 180px;
+    padding: 25px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .orgimg {
+    height: 200px;
+    padding: 30px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -302,34 +343,31 @@ a {
   }
   
   .orgimg {
-    flex: 1 1 calc(50% - 1.5em);
-    min-width: 250px;
     height: 150px;
-    padding: 25px;
+    padding: 20px;
   }
 }
 
 @media (max-width: 768px) {
   .orgimgcontainer {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
     gap: 1.5em;
   }
   
   .orgimg {
-    flex: none;
-    width: 100%;
-    max-width: 500px;
-    min-width: auto;
-    height: 160px;
-    padding: 30px;
+    height: 140px;
+    padding: 25px;
   }
 }
 
 @media (max-width: 576px) {
+  .orgimgcontainer {
+    gap: 1.2em;
+  }
+  
   .orgimg {
-    height: 140px;
-    padding: 25px;
+    height: 120px;
+    padding: 20px;
   }
 }
 
@@ -345,7 +383,6 @@ a {
 .qbox {
   display: flex;
   width: 100%;
-  max-width: 1400px;
   min-height: 20em;
   padding: 2em;
   flex-direction: column;
