@@ -1,21 +1,37 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import App from './App.jsx'
-import VenuePage from './venue.jsx'
-import RegistrationPage from './registration.jsx'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.bundle.min'
-import './index.css'
+import React, { Suspense, lazy } from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import './styles/global.css';
+
+/* ── Lazy-loaded pages ── */
+const Home           = lazy(() => import('./pages/Home'));
+const Venue          = lazy(() => import('./pages/Venue'));
+const Contact        = lazy(() => import('./pages/Contact'));
+const ImportantDates = lazy(() => import('./pages/ImportantDates'));
+
+/* ── Minimal loader shown while chunks download ── */
+function PageLoader() {
+  return (
+    <div className="page-loader">
+      <div className="page-loader-spinner" />
+    </div>
+  );
+}
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/venue" element={<VenuePage />} />
-        <Route path="/register" element={<RegistrationPage />} />
-      </Routes>
+      <Suspense fallback={<PageLoader />}>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="venue" element={<Venue />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="important-dates" element={<ImportantDates />} />
+          </Route>
+        </Routes>
+      </Suspense>
     </BrowserRouter>
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);

@@ -1,0 +1,385 @@
+/* ── Hero Page Styles ──
+   Used by Contact and ImportantDates pages.
+   Same visual language as the original registration hero. */
+
+/* ====================================
+   HERO BANNER
+   ==================================== */
+
+.hero-page-hero {
+  background-color: #0057FF;
+  color: #fff;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: calc(2em + 36px + 70px + 2em) 1.5em 3em;
+}
+
+@media (min-width: 768px) {
+  .hero-page-hero {
+    padding: calc(2em + 46px + 80px + 2em) 3em 4em;
+    min-height: 45vh;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-page-hero {
+    padding: calc(2em + 46px + 80px + 3em) 5em 5em;
+  }
+}
+
+.hero-page-hero h1 {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 800;
+  color: #FFF;
+  line-height: 1.2;
+  max-width: 800px;
+  margin: 0 0 0.4em 0;
+}
+
+.hero-page-subtitle {
+  color: #FFFDEF;
+  font-family: Avenir, sans-serif;
+  font-size: clamp(1rem, 2.5vw, 1.35rem);
+  font-weight: 400;
+  line-height: 1.6;
+  max-width: 650px;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* ====================================
+   BODY / CONTENT AREA
+   ==================================== */
+
+.hero-page-body {
+  background-color: #FAF4EC;
+  padding: 3em 1.5em;
+}
+
+@media (min-width: 768px)  { .hero-page-body { padding: 4em 3em; } }
+@media (min-width: 1024px) { .hero-page-body { padding: 5em 5em; } }
+@media (min-width: 1400px) { .hero-page-body { padding: 6em 7.5em; } }
+
+/* ====================================
+   CONTACT PAGE — ORG LOGOS
+   ==================================== */
+
+.contact-org-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  margin-bottom: 3em;
+  flex-wrap: wrap;
+}
+
+.contact-org-logos img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .contact-org-logos img {
+    height: 80px;
+  }
+}
+
+/* ====================================
+   CONTACT PAGE — CARDS
+   ==================================== */
+
+.contact-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25em;
+  max-width: 900px;
+  margin: 0 auto 3em;
+}
+
+@media (min-width: 640px) {
+  .contact-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 2em;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 87, 255, 0.12);
+  border-color: #0057FF;
+}
+
+.contact-card-label {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0057FF;
+  margin-bottom: 0.5em;
+}
+
+.contact-card-email {
+  font-family: Avenir, sans-serif;
+  font-size: 0.85rem;
+  color: #333;
+  word-break: break-all;
+  flex: 1;
+}
+
+.contact-card-arrow {
+  font-size: 1.5rem;
+  color: #0057FF;
+  margin-top: 1em;
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover .contact-card-arrow {
+  transform: translateX(6px);
+}
+
+/* ====================================
+   CONTACT PAGE — TEAM
+   ==================================== */
+
+.contact-team-section {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-team-section h2 {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-weight: 700;
+  color: #0057FF;
+  margin: 0 0 0.5em 0;
+}
+
+.contact-team-intro {
+  font-family: Avenir, sans-serif;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: #333;
+  line-height: 1.6;
+  margin: 0 0 2em 0;
+}
+
+.contact-team-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+}
+
+@media (min-width: 640px) {
+  .contact-team-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .contact-team-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.contact-team-member {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25em 1.5em;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #e5e5e5;
+  transition: border-color 0.3s ease;
+}
+
+.contact-team-member:hover {
+  border-color: #0057FF;
+}
+
+.member-name {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #000;
+  margin-bottom: 0.25em;
+}
+
+.member-affiliation {
+  font-family: Avenir, sans-serif;
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* ====================================
+   IMPORTANT DATES PAGE — TIMELINE
+   ==================================== */
+
+.dates-timeline {
+  max-width: 700px;
+  margin: 0 auto 3em;
+  display: flex;
+  flex-direction: column;
+}
+
+.dates-timeline-item {
+  display: flex;
+  gap: 1.5em;
+  position: relative;
+}
+
+.dates-timeline-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 24px;
+}
+
+.dates-marker-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #0057FF;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px #0057FF;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.dates-status-closed .dates-marker-dot {
+  background: #999;
+  box-shadow: 0 0 0 2px #999;
+}
+
+.dates-status-open .dates-marker-dot {
+  background: #00FF33;
+  box-shadow: 0 0 0 2px #00FF33, 0 0 12px rgba(0, 255, 51, 0.4);
+}
+
+.dates-marker-line {
+  width: 2px;
+  flex: 1;
+  background: #ccc;
+  min-height: 40px;
+}
+
+.dates-timeline-content {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2.5em;
+}
+
+.dates-label {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 0.25em;
+}
+
+.dates-value {
+  font-family: Avenir, sans-serif;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: #333;
+  margin-bottom: 0.5em;
+}
+
+.dates-badge-open {
+  display: inline-block;
+  background: #00FF33;
+  color: #000;
+  font-family: Avenir, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.3em 0.8em;
+  border-radius: 20px;
+  width: fit-content;
+}
+
+.dates-badge-closed {
+  display: inline-block;
+  background: #e5e5e5;
+  color: #666;
+  font-family: Avenir, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.3em 0.8em;
+  border-radius: 20px;
+  width: fit-content;
+}
+
+/* ====================================
+   IMPORTANT DATES PAGE — CTA
+   ==================================== */
+
+.dates-cta {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.dates-cta p {
+  font-family: Avenir, sans-serif;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: #333;
+  line-height: 1.6;
+  margin: 0 0 2em 0;
+}
+
+.dates-cta-buttons {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.dates-btn-primary {
+  background: #0057FF;
+  color: #fff;
+  padding: 0.8em 2em;
+  border-radius: 8px;
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.dates-btn-primary:hover {
+  background: #003fcc;
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+.dates-btn-secondary {
+  background: transparent;
+  color: #0057FF;
+  padding: 0.8em 2em;
+  border-radius: 8px;
+  border: 2px solid #0057FF;
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.dates-btn-secondary:hover {
+  background: #0057FF;
+  color: #fff;
+  transform: translateY(-2px);
+}

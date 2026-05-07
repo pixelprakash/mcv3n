@@ -1,0 +1,10 @@
+.main-content-padding {
+  padding-top: calc(36px + 70px); /* ticker + navbar on mobile */
+}
+ 
+@media (min-width: 768px) {
+  .main-content-padding {
+    padding-top: calc(46px + 80px); /* ticker + navbar on desktop */
+  }
+}
+ 

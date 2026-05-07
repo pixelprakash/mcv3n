@@ -1,0 +1,67 @@
+/* ── Ticker / Marquee Bar ──
+   Fixed at absolute top, full-width green band */
+
+.ticker-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1060;
+  width: 100%;
+  overflow: hidden;
+  background-color: #00ff33;
+  padding: 10px 0;
+  font-family: 'Open Sans', Avenir, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .ticker-container {
+    padding: 14px 0;
+    font-size: 18px;
+  }
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker-scroll 120s linear infinite;
+}
+
+.ticker-set {
+  display: flex;
+  align-items: center;
+}
+
+.ticker-item {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  margin-right: 20px;
+}
+
+.ticker-text {
+  color: #000;
+  display: inline-block;
+  cursor: default;
+  transition: transform 0.3s ease;
+}
+
+@media (hover: hover) {
+  .ticker-text:hover {
+    transform: scale(1.08);
+  }
+}
+
+.ticker-separator {
+  color: #0057FF;
+  margin-left: 20px;
+  display: inline-block;
+}
+
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
