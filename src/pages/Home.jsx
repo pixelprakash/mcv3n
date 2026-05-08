@@ -32,8 +32,8 @@ export default function Home() {
           <h1 style={{ color: '#0F3' }}>August 21-22, 2026</h1>
           <h2>Venue: Indian Institute of Technology Hyderabad, India</h2>
 
-          <a href="https://forms.cloud.microsoft/r/RhZq0aqFX0">
-            <button className="cool-btn">Submit Abstract</button>
+          <a href="https://events.humanitix.com/6th-msc">
+            <button className="cool-btn">Register Now</button>
           </a>
         </div>
 
