@@ -741,3 +741,244 @@
   .scroll-container { height: 220px; }
   .scroll-image { height: 220px; }
 }
+
+/* ══════════════════════════════════════════════
+   VENUE ADDITIONS — Tariff Table + Hostel
+   Append this to your existing venuestyles.css
+   ══════════════════════════════════════════════ */
+
+/* ── Currency Note ── */
+.tariff-currency-note {
+  font-family: Avenir, sans-serif;
+  font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+  color: #666;
+  line-height: 1.5;
+  margin: 1.5em 0 1em;
+  padding: 0.75em 1.25em;
+  background: #fff;
+  border-left: 4px solid #0057FF;
+  border-radius: 6px;
+}
+
+/* ── Desktop/Tablet Table ── */
+.tariff-desktop-only {
+  display: block;
+}
+
+.tariff-mobile-only {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .tariff-desktop-only {
+    display: none;
+  }
+  .tariff-mobile-only {
+    display: block;
+  }
+}
+
+/* ── Tariff Table ── */
+.tariff-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 1em 0 3em;
+  border-radius: 12px;
+  border: 1px solid #d0d0d0;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.tariff-table {
+  width: 100%;
+  min-width: 700px;
+  border-collapse: collapse;
+  font-family: Avenir, sans-serif;
+  font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+  background: #fff;
+}
+
+.tariff-table thead {
+  background: #0057FF;
+  color: #fff;
+}
+
+.tariff-table th {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: clamp(0.75rem, 1.4vw, 0.9rem);
+  padding: 14px 16px;
+  text-align: left;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tariff-table th:last-child {
+  border-right: none;
+}
+
+.tariff-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+  border-right: 1px solid #eee;
+  color: #333;
+  vertical-align: middle;
+  line-height: 1.5;
+}
+
+.tariff-table td:last-child {
+  border-right: none;
+}
+
+.tariff-table tbody tr:hover {
+  background: #f8f6f2;
+}
+
+.tariff-type-cell {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-weight: 600;
+  color: #0057FF;
+  border-right: 2px solid #d0d0d0 !important;
+  background: #fafafa;
+}
+
+.tariff-num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.tariff-total {
+  font-weight: 700;
+  color: #0057FF;
+  font-size: 1.05em;
+}
+
+.tariff-desc-cell {
+  color: #666;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  border-left: 1px solid #eee;
+  max-width: 250px;
+}
+
+/* ── Mobile Card View ── */
+.tariff-mobile-card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1em;
+}
+
+.tariff-mobile-header {
+  background: #0057FF;
+  color: #fff;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.tariff-mobile-type {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.tariff-mobile-occ {
+  font-family: Avenir, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  opacity: 0.85;
+}
+
+.tariff-mobile-prices {
+  padding: 12px 16px;
+}
+
+.tariff-mobile-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  font-family: Avenir, sans-serif;
+  font-size: 0.9rem;
+  color: #333;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.tariff-mobile-row:last-child {
+  border-bottom: none;
+}
+
+.tariff-mobile-total {
+  font-weight: 700;
+  color: #0057FF;
+  font-size: 1rem;
+  padding-top: 8px;
+}
+
+.tariff-mobile-desc {
+  font-family: Avenir, sans-serif;
+  font-size: 0.82rem;
+  color: #666;
+  line-height: 1.5;
+  padding: 0 16px 12px;
+  margin: 0;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 10px;
+}
+
+/* ── Hostel Section ── */
+.hostel-section {
+  margin-top: 3em;
+  padding-top: 3em;
+  border-top: 2px solid #e5e5e5;
+}
+
+.hostel-details-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5em;
+  margin-top: 1.5em;
+}
+
+@media (min-width: 768px) {
+  .hostel-details-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+  }
+}
+
+.hostel-detail-card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 2em;
+  transition: all 0.3s ease;
+}
+
+.hostel-detail-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 87, 255, 0.1);
+}
+
+.hostel-detail-card h4 {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: clamp(1.15rem, 2.5vw, 1.35rem);
+  font-weight: 600;
+  color: #0057FF;
+  margin: 0 0 1em 0;
+}
+
+.hostel-detail-card p {
+  font-family: Avenir, sans-serif;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  font-weight: 400;
+  color: #333;
+  line-height: 1.6;
+  margin: 0.5em 0;
+}

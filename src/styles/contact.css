@@ -1,0 +1,300 @@
+/* ═══════════════════════════════════
+   CONTACT PAGE — Consolidated
+   ═══════════════════════════════════ */
+
+/* ── Hero ── */
+.cp-hero {
+  text-align: center;
+  padding: calc(48px + 70px + 3em) 1.5em 3em;
+  background: #0057FF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75em;
+}
+
+@media (min-width: 768px) {
+  .cp-hero {
+    padding: calc(50px + 80px + 3em) 3em 3.5em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cp-hero {
+    padding: calc(50px + 90px + 3.5em) 5em 4em;
+  }
+}
+
+.cp-title {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: clamp(2rem, 6vw, 3.5rem) !important;
+  font-weight: 800;
+  color: #fff !important;
+  margin: 0 !important;
+  line-height: 1.1;
+}
+
+.cp-subtitle {
+  font-family: Avenir, sans-serif;
+  font-size: clamp(0.92rem, 2vw, 1.1rem) !important;
+  font-weight: 400;
+  color: rgba(255,255,255,0.75) !important;
+  line-height: 1.6;
+  max-width: 480px;
+  margin: 0 !important;
+}
+
+.cp-hero-email {
+  font-family: Avenir, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #00FF33;
+  text-decoration: none;
+  margin-top: 0.5em;
+  transition: opacity 0.25s;
+}
+
+.cp-hero-email:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* ── Body ── */
+.cp-body {
+  background: #FAF4EC;
+  padding: 4em 1.5em;
+}
+
+@media (min-width: 768px)  { .cp-body { padding: 4em 3em; } }
+@media (min-width: 1024px) { .cp-body { padding: 5em 5em; } }
+@media (min-width: 1400px) { .cp-body { padding: 5em 7.5em; } }
+
+/* ── Split: Form + Photo ── */
+.cp-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3em;
+  margin-bottom: 4em;
+}
+
+@media (min-width: 900px) {
+  .cp-split {
+    grid-template-columns: 1fr 1fr;
+    gap: 3em;
+    align-items: start;
+  }
+}
+
+/* ── Form ── */
+.cp-form-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1em;
+}
+
+.cp-form-heading {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem) !important;
+  font-weight: 700;
+  color: #23262E !important;
+  margin: 0 0 0.5em !important;
+}
+
+.cp-form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.1em;
+}
+
+@media (min-width: 540px) {
+  .cp-form-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.cp-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35em;
+}
+
+.cp-label {
+  font-family: Avenir, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #23262E;
+  letter-spacing: 0.02em;
+}
+
+.cp-req {
+  color: #0057FF;
+}
+
+.cp-input {
+  font-family: Avenir, sans-serif;
+  font-size: 0.92rem !important;
+  font-weight: 400;
+  color: #23262E !important;
+  background: #fff;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 14px;
+  outline: none;
+  transition: border-color 0.25s, box-shadow 0.25s;
+  -webkit-appearance: none;
+  margin: 0 !important;
+  line-height: 1.5 !important;
+}
+
+.cp-input::placeholder {
+  color: #bbb;
+}
+
+.cp-input:focus {
+  border-color: #0057FF;
+  box-shadow: 0 0 0 3px rgba(0, 87, 255, 0.08);
+}
+
+.cp-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.cp-submit {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #fff;
+  background: #0057FF;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.2s;
+  align-self: flex-start;
+  margin-top: 0.5em;
+}
+
+.cp-submit:hover {
+  background: #003fcc;
+  transform: translateY(-1px);
+}
+
+.cp-submit:active {
+  transform: translateY(0);
+}
+
+.cp-submit:disabled {
+  background: #00FF33;
+  color: #23262E;
+  cursor: default;
+  transform: none;
+}
+
+/* ── Photo ── */
+.cp-photo-side {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+}
+
+.cp-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  object-fit: cover;
+}
+
+.cp-photo-caption {
+  font-family: Avenir, sans-serif;
+  font-size: 0.75rem !important;
+  color: #999 !important;
+  margin: 0 !important;
+}
+
+/* ── Organizers ── */
+.cp-org {
+  padding-top: 3em;
+  border-top: 1px solid #ddd;
+}
+
+.cp-org-logos {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.5em, 4vw, 3em);
+  margin-bottom: 2em;
+}
+
+.cp-org-logo {
+  height: clamp(35px, 6vw, 55px);
+  width: auto;
+  object-fit: contain;
+}
+
+.cp-org-title {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem) !important;
+  font-weight: 700;
+  color: #23262E !important;
+  margin: 0 0 1.5em !important;
+}
+
+.cp-team {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border-top: 1px solid #ddd;
+}
+
+@media (min-width: 640px) {
+  .cp-team {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cp-team {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.cp-member {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1em;
+  padding: 0.9em 0;
+  border-bottom: 1px solid #ddd;
+}
+
+@media (min-width: 640px) {
+  .cp-member {
+    padding: 0.9em 1em;
+  }
+}
+
+.cp-member-name {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #23262E;
+}
+
+.cp-member-aff {
+  font-family: Avenir, sans-serif;
+  font-size: 0.75rem;
+  color: #888;
+  line-height: 1.4;
+}
+
+/* ── Mobile tightening ── */
+@media (max-width: 480px) {
+  .cp-body {
+    padding: 3em 1.25em;
+  }
+
+  .cp-submit {
+    width: 100%;
+    text-align: center;
+  }
+}

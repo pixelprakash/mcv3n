@@ -1,0 +1,494 @@
+/* ═══════════════════════════════════
+   DATES & PROGRAMME PAGE
+   ═══════════════════════════════════ */
+
+/* ══ Important Dates Split ══ */
+.id-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  padding-top: calc(48px + 70px);
+}
+
+@media (min-width: 768px)  { .id-split { padding-top: calc(50px + 80px); } }
+@media (min-width: 1024px) { .id-split { padding-top: calc(50px + 90px); } }
+
+.id-left {
+  background: #FAF4EC;
+  display: flex;
+  align-items: center;
+  padding: 4em 3em 4em 1.5em;
+}
+
+@media (min-width: 768px)  { .id-left { padding: 4em 3em 4em 3em; } }
+@media (min-width: 1024px) { .id-left { padding: 5em 3em 5em 5em; } }
+@media (min-width: 1400px) { .id-left { padding: 5em 4em 5em 7.5em; } }
+
+.id-left-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25em;
+  max-width: 520px;
+}
+
+.id-title {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: clamp(2rem, 5vw, 3.2rem) !important;
+  font-weight: 800;
+  color: #23262E !important;
+  margin: 0 !important;
+  line-height: 1.1;
+}
+
+.id-subtitle {
+  font-family: Avenir, sans-serif;
+  font-size: clamp(0.95rem, 1.8vw, 1.15rem) !important;
+  color: #555 !important;
+  line-height: 1.6;
+  margin: 0 !important;
+}
+
+.id-body {
+  font-family: Avenir, sans-serif;
+  font-size: clamp(0.88rem, 1.5vw, 1rem) !important;
+  color: #666 !important;
+  line-height: 1.7;
+  margin: 0.5em 0 0 !important;
+}
+
+.id-right {
+  background: #0057FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4em 1.5em 4em 2em;
+}
+
+@media (min-width: 768px)  { .id-right { padding: 4em 3em 4em 2em; } }
+@media (min-width: 1024px) { .id-right { padding: 5em 5em 5em 2.5em; } }
+@media (min-width: 1400px) { .id-right { padding: 5em 7.5em 5em 3em; } }
+
+.id-card {
+  background: #FAF4EC;
+  border-radius: 16px;
+  padding: clamp(2em, 4vw, 3em);
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.id-item { display: flex; gap: 1.25em; }
+
+.id-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 20px;
+  padding-top: 4px;
+}
+
+.id-dot {
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: #ccc;
+  border: 3px solid #FAF4EC;
+  box-shadow: 0 0 0 2px #ccc;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.id-s-closed .id-dot { background: #bbb; box-shadow: 0 0 0 2px #bbb; }
+.id-s-open .id-dot { background: #00FF33; box-shadow: 0 0 0 2px #00FF33, 0 0 10px rgba(0, 255, 51, 0.35); }
+.id-s-upcoming .id-dot { background: #0057FF; box-shadow: 0 0 0 2px #0057FF; }
+
+.id-line { width: 2px; flex: 1; background: #ddd; min-height: 24px; }
+
+.id-content { display: flex; flex-direction: column; padding-bottom: 2em; }
+.id-item:last-child .id-content { padding-bottom: 0; }
+
+.id-label {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: clamp(0.95rem, 1.8vw, 1.15rem);
+  font-weight: 700;
+  color: #23262E;
+  margin-bottom: 0.2em;
+}
+
+.id-date {
+  font-family: Avenir, sans-serif;
+  font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+  color: #555;
+  margin-bottom: 0.5em;
+}
+
+.id-badge-open {
+  display: inline-block;
+  background: #00FF33; color: #000;
+  font-family: Avenir, sans-serif; font-size: 0.72rem; font-weight: 700;
+  padding: 0.25em 0.75em; border-radius: 20px; width: fit-content;
+}
+
+.id-badge-closed {
+  display: inline-block;
+  background: #e8e8e8; color: #777;
+  font-family: Avenir, sans-serif; font-size: 0.72rem; font-weight: 600;
+  padding: 0.25em 0.75em; border-radius: 20px; width: fit-content;
+}
+
+@media (max-width: 860px) {
+  .id-split { grid-template-columns: 1fr; min-height: auto; }
+  .id-left { padding: 3.5em 1.5em 3em; }
+  .id-left-inner { max-width: 100%; }
+  .id-right { padding: 3em 1.5em 4em; }
+  .id-card { max-width: 500px; }
+}
+
+@media (max-width: 480px) {
+  .id-left { padding: 3em 1.25em 2.5em; }
+  .id-right { padding: 2.5em 1.25em 3.5em; }
+  .id-card { padding: 1.75em; }
+  .id-content { padding-bottom: 1.5em; }
+}
+
+
+/* ══════════════════════════════════════
+   PROGRAMME SECTION
+   Uses site margin system: 1.5→3→5→7.5em
+   ══════════════════════════════════════ */
+
+.prog {
+  background: #FAF4EC;
+  padding: 5em 1.5em 6em;
+  border-top: 2px solid #e5e5e5;
+}
+
+@media (min-width: 768px)  { .prog { padding: 6em 3em 7em; } }
+@media (min-width: 1024px) { .prog { padding: 7em 5em 8em; } }
+@media (min-width: 1400px) { .prog { padding: 7em 7.5em 8em; } }
+
+/* ── Header — left aligned ── */
+.prog-header {
+  margin-bottom: 3em;
+}
+
+.prog-heading {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem) !important;
+  font-weight: 800;
+  color: #23262E !important;
+  margin: 0 0 0.3em !important;
+  line-height: 1.1;
+}
+
+.prog-sub {
+  font-family: Avenir, sans-serif;
+  font-size: clamp(0.9rem, 1.6vw, 1.1rem) !important;
+  color: #999 !important;
+  margin: 0 !important;
+}
+
+/* ── Day Tabs — no hover effect ── */
+.prog-tabs {
+  display: inline-flex;
+  gap: 0;
+  border: 1.5px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 2.5em;
+}
+
+.prog-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1em;
+  padding: 1.25em 2.5em;
+  background: #fff;
+  border: none;
+  border-right: 1px solid #ddd;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.prog-tab:last-child { border-right: none; }
+
+.prog-tab--on {
+  background: #0057FF;
+}
+
+.prog-tab-day {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: clamp(0.95rem, 1.8vw, 1.15rem);
+  font-weight: 700;
+  color: #23262E;
+}
+
+.prog-tab--on .prog-tab-day { color: #fff; }
+
+.prog-tab-date {
+  font-family: Avenir, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #999;
+}
+
+.prog-tab--on .prog-tab-date { color: rgba(255,255,255,0.65); }
+
+.prog-tab-title {
+  font-family: Avenir, sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: #bbb;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.prog-tab--on .prog-tab-title { color: rgba(255,255,255,0.4); }
+
+/* ── Legend ── */
+.prog-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25em;
+  margin-bottom: 3.5em;
+}
+
+.prog-legend-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: Avenir, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.prog-legend-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── Timeline ── */
+.prog-tl {
+  position: relative;
+}
+
+.prog-row {
+  display: grid;
+  grid-template-columns: 70px 24px 1fr;
+  gap: 1.25em;
+  padding: 2em 0;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+
+.prog-row:last-child { border-bottom: none; }
+
+.prog-row--break {
+  padding: 0.75em 0;
+}
+
+/* Time */
+.prog-time {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-top: 0.1em;
+}
+
+.prog-time-h {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  font-weight: 700;
+  color: #23262E;
+  line-height: 1;
+}
+
+.prog-time-to {
+  font-family: Avenir, sans-serif;
+  font-size: 0.65rem;
+  color: #ccc;
+  margin-top: 0.25em;
+}
+
+/* Vertical line + dot */
+.prog-line-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0.3em;
+}
+
+.prog-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: #0057FF;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.prog-row--break .prog-dot {
+  width: 8px; height: 8px;
+  background: #ccc;
+}
+
+.prog-stem {
+  width: 2px;
+  flex: 1;
+  background: #e0e0e0;
+  min-height: 20px;
+}
+
+/* Session cards */
+.prog-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75em;
+}
+
+.prog-card {
+  flex: 1;
+  min-width: 240px;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  padding: 1.25em 1.4em;
+}
+
+.prog-card--break {
+  background: transparent;
+  border: 1px dashed #d5d5d5;
+  min-width: 0;
+  flex: none;
+  width: auto;
+  padding: 0.6em 1.2em;
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+}
+
+.prog-card-break-text {
+  font-family: Avenir, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #aaa;
+}
+
+.prog-card-break-desc {
+  font-family: Avenir, sans-serif;
+  font-size: 0.72rem;
+  color: #ccc;
+}
+
+/* Card internals */
+.prog-card-head {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 0.6em;
+}
+
+.prog-badge {
+  font-family: Avenir, sans-serif;
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 2px 9px;
+  border-radius: 100px;
+  border: 1px solid;
+  white-space: nowrap;
+}
+
+.prog-tag {
+  font-family: Avenir, sans-serif;
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #059669;
+  background: rgba(5, 150, 105, 0.06);
+  border: 1px solid rgba(5, 150, 105, 0.18);
+  padding: 1px 7px;
+  border-radius: 100px;
+}
+
+.prog-card-t {
+  font-family: 'Cabinet Grotesk', sans-serif !important;
+  font-size: clamp(0.88rem, 1.4vw, 1.02rem) !important;
+  font-weight: 600 !important;
+  color: #23262E !important;
+  line-height: 1.4 !important;
+  margin: 0 !important;
+}
+
+.prog-card-d {
+  font-family: Avenir, sans-serif !important;
+  font-size: clamp(0.75rem, 1.2vw, 0.85rem) !important;
+  color: #999 !important;
+  line-height: 1.55 !important;
+  margin: 0.3em 0 0 !important;
+}
+
+
+/* ══════════════════════════════════
+   RESPONSIVE — Programme
+   ══════════════════════════════════ */
+
+@media (max-width: 768px) {
+  .prog-row {
+    grid-template-columns: 55px 20px 1fr;
+    gap: 0.75em;
+    padding: 1.5em 0;
+  }
+
+  .prog-card {
+    min-width: 0;
+    flex-basis: 100%;
+    padding: 1em 1.1em;
+  }
+
+  .prog-tab {
+    padding: 1em 1.25em;
+  }
+}
+
+@media (max-width: 480px) {
+  .prog {
+    padding: 3.5em 1.25em 4em;
+  }
+
+  .prog-header {
+    margin-bottom: 2em;
+  }
+
+  .prog-row {
+    grid-template-columns: 45px 16px 1fr;
+    gap: 0.5em;
+    padding: 1.25em 0;
+  }
+
+  .prog-time-h { font-size: 0.88rem; }
+
+  .prog-dot { width: 8px; height: 8px; }
+  .prog-row--break .prog-dot { width: 6px; height: 6px; }
+
+  .prog-tab {
+    padding: 0.85em 0.75em;
+  }
+
+  .prog-tab-title { display: none; }
+
+  .prog-legend {
+    gap: 0.75em;
+    margin-bottom: 2.5em;
+  }
+
+  .prog-legend-chip { font-size: 0.62rem; }
+
+  .prog-card { padding: 0.9em 1em; }
+}

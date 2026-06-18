@@ -1,0 +1,598 @@
+/* ══════════════════════════════════════════════
+   DIC PAGE — MSC Design System
+   ══════════════════════════════════════════════ */
+
+/* ── HERO ── */
+.dic-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(20px, 3vw, 40px);
+  padding: calc(48px + 70px + clamp(48px, 6vw, 80px)) 1.5em clamp(48px, 6vw, 80px);
+  background: #0057FF;
+  color: #fff;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .dic-hero {
+    padding-top: calc(48px + 80px + clamp(32px, 4vw, 48px));
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+}
+@media (min-width: 1024px) {
+  .dic-hero {
+    padding-top: calc(48px + 90px + clamp(32px, 4vw, 48px));
+    padding-left: 5em;
+    padding-right: 5em;
+  }
+}
+@media (min-width: 1200px) {
+  .dic-hero {
+    padding-top: calc(48px + 100px + clamp(32px, 4vw, 48px));
+  }
+}
+@media (min-width: 1400px) {
+  .dic-hero {
+    padding-left: 7.5em;
+    padding-right: 7.5em;
+  }
+}
+
+.dic-hero-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.dic-hero-eyebrow {
+  font-family: Avenir, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.dic-hero-title {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: clamp(2rem, 6vw, 4rem) !important;
+  font-weight: 800;
+  color: #fff !important;
+  line-height: 1.1;
+  margin: 0 0 0.3em 0 !important;
+}
+
+.dic-hero-sub {
+  font-family: Avenir, sans-serif;
+  font-size: clamp(1rem, 2vw, 1.35rem) !important;
+  font-weight: 400;
+  color: #FFFDEF !important;
+  line-height: 1.5;
+  margin: 0 !important;
+}
+
+.dic-hero-logo {
+  height: clamp(60px, 8vw, 100px);
+  width: auto;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #fff;
+  padding: 8px;
+}
+
+@media (max-width: 540px) {
+  .dic-hero-logo { height: 50px; padding: 6px; }
+}
+
+/* ── SECTIONS ── */
+.dic-section {
+  padding: 0 1.5em;
+  margin-bottom: clamp(48px, 6vw, 80px);
+}
+
+@media (min-width: 768px) { .dic-section { padding: 0 3em; } }
+@media (min-width: 1024px) { .dic-section { padding: 0 5em; } }
+@media (min-width: 1400px) { .dic-section { padding: 0 7.5em; } }
+
+.dic-section--flush {
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.dic-section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(1.4rem, 2.5vw, 2rem) !important;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: #23262E !important;
+  margin-bottom: clamp(20px, 3vw, 32px) !important;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #0057FF;
+}
+
+/* ── ABOUT ── */
+.dic-about-section {
+  background: #FAF4EC;
+  padding-top: clamp(40px, 5vw, 64px) !important;
+  padding-bottom: clamp(40px, 5vw, 64px) !important;
+  margin-bottom: 0;
+}
+
+.dic-about-text {
+  font-family: Avenir, sans-serif;
+  font-size: clamp(0.95rem, 1.4vw, 1.1rem) !important;
+  font-weight: 400;
+  color: #333 !important;
+  line-height: 1.75;
+  margin-top: 1.25em !important;
+  margin-bottom: 0 !important;
+}
+
+/* ── IMAGE SLIDER ── */
+.dic-slider-wrap {
+  overflow: hidden;
+  margin: clamp(32px, 4vw, 48px) 0;
+}
+
+.dic-slider {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  animation: dicSliderScroll 100s linear infinite;
+}
+
+.dic-slider:hover {
+  animation-play-state: paused;
+}
+
+.dic-slider-img {
+  height: clamp(180px, 25vw, 320px);
+  width: auto;
+  flex-shrink: 0;
+  border-radius: 16px;
+  object-fit: cover;
+  user-select: none;
+}
+
+@keyframes dicSliderScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(calc(-50% - 8px)); }
+}
+
+/* ── STATS ── */
+.dic-stats {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1px;
+  background: #ddd;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.dic-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: clamp(18px, 2.5vw, 30px) 8px;
+  background: #FAF4EC;
+  text-align: center;
+  transition: background 0.25s;
+}
+
+.dic-stat:hover {
+  background: #f0ece4;
+}
+
+.dic-stat-num {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 700;
+  color: #0057FF;
+  line-height: 1;
+  transition: transform 0.25s cubic-bezier(.16,1,.3,1);
+}
+
+.dic-stat:hover .dic-stat-num {
+  transform: scale(1.08);
+}
+
+.dic-stat-label {
+  font-family: Avenir, sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #666;
+  line-height: 1.3;
+}
+
+@media (max-width: 900px) { .dic-stats { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 540px) { .dic-stats { grid-template-columns: repeat(2, 1fr); } }
+
+/* ── VIDEO GRID — 2 columns ── */
+.dic-video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.dic-video {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  background: #23262E;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.dic-video-thumb {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.4s ease, transform 0.6s cubic-bezier(.16,1,.3,1);
+}
+
+.dic-video:hover .dic-video-thumb {
+  transform: scale(1.03);
+}
+
+.dic-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.15) 40%, transparent 100%);
+  pointer-events: none;
+  transition: background 0.3s;
+}
+
+.dic-video:hover .dic-video-overlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
+}
+
+.dic-video-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(0, 87, 255, 0.7);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 2px;
+  transition: all 0.35s cubic-bezier(.16,1,.3,1);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  z-index: 2;
+}
+
+.dic-video:hover .dic-video-play {
+  transform: translate(-50%, -50%) scale(1.12);
+  background: rgba(0, 87, 255, 0.95);
+}
+
+.dic-video-title {
+  position: absolute;
+  bottom: 16px;
+  left: 20px;
+  right: 20px;
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: clamp(0.82rem, 1.4vw, 1rem);
+  font-weight: 600;
+  color: #fff;
+  z-index: 2;
+  pointer-events: none;
+  line-height: 1.3;
+}
+
+.dic-video-iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+}
+
+/* Toggle button */
+.dic-video-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 1.5em auto 0;
+  padding: 10px 24px;
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 100px;
+  font-family: Avenir, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  transition: border-color 0.25s, color 0.25s;
+}
+
+.dic-video-toggle:hover {
+  border-color: #0057FF;
+  color: #0057FF;
+}
+
+@media (max-width: 640px) {
+  .dic-video-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .dic-video-play { width: 44px; height: 44px; }
+  .dic-video-play svg { width: 16px; height: 16px; }
+  .dic-video-title { font-size: 0.8rem; bottom: 12px; left: 14px; right: 14px; }
+}
+/* ═══════════════════════════════════
+   RESEARCH DOMAINS — 3×3 Card Grid
+   ═══════════════════════════════════ */
+
+.dic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: #ddd;
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.dic-card {
+  background: #FAF4EC;
+  padding: clamp(1.25em, 2.5vw, 2em);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+  transition: background 0.25s, padding-left 0.3s;
+  text-decoration: none;
+  color: inherit;
+}
+
+.dic-card:hover {
+  background: #f4ede3;
+  padding-left: clamp(1.5em, 3vw, 2.5em);
+}
+
+.dic-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25em;
+}
+
+.dic-card-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  color: #ccc;
+  line-height: 1;
+  transition: color 0.25s;
+}
+
+.dic-card:hover .dic-card-num {
+  color: #0057FF;
+}
+
+.dic-card-type {
+  font-family: Avenir, sans-serif;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #0057FF;
+  background: rgba(0, 87, 255, 0.06);
+  border: 1px solid rgba(0, 87, 255, 0.14);
+  border-radius: 100px;
+  padding: 2px 8px;
+  white-space: nowrap;
+}
+
+/* Override App.css global h3 */
+.dic-card-title {
+  font-family: 'Cabinet Grotesk', sans-serif !important;
+  font-size: clamp(0.95rem, 1.5vw, 1.15rem) !important;
+  font-weight: 700 !important;
+  line-height: 1.3 !important;
+  color: #23262E !important;
+  margin: 0 !important;
+  transition: color 0.25s;
+}
+
+.dic-card:hover .dic-card-title {
+  color: #0057FF !important;
+}
+
+/* Override App.css global p */
+.dic-card-desc {
+  font-family: Avenir, sans-serif !important;
+  font-size: clamp(0.78rem, 1.1vw, 0.88rem) !important;
+  font-weight: 400 !important;
+  color: #777 !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.dic-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: auto;
+  padding-top: 0.5em;
+}
+
+.dic-card-tag {
+  font-family: Avenir, sans-serif;
+  font-size: 0.62rem;
+  font-weight: 500;
+  color: #999;
+  border: 1px solid #ddd;
+  border-radius: 100px;
+  padding: 2px 9px;
+  transition: border-color 0.25s, color 0.25s;
+}
+
+.dic-card:hover .dic-card-tag {
+  border-color: rgba(0, 87, 255, 0.2);
+  color: #666;
+}
+
+/* ── CTA Card (9th cell) ── */
+.dic-card-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.5em;
+  background: #0057FF;
+  cursor: pointer;
+}
+
+.dic-card-cta:hover {
+  background: #004ae0;
+  padding-left: clamp(1.5em, 3vw, 2.5em);
+}
+
+.dic-cta-q {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.dic-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: Avenir, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #00FF33;
+  transition: gap 0.25s;
+}
+
+.dic-card-cta:hover .dic-cta-btn {
+  gap: 14px;
+}
+
+@media (max-width: 900px) {
+  .dic-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .dic-grid {
+    grid-template-columns: 1fr;
+  }
+  .dic-card:hover {
+    padding-left: clamp(1.25em, 2.5vw, 2em);
+  }
+  .dic-card-cta:hover {
+    padding-left: clamp(1.25em, 2.5vw, 2em);
+  }
+}
+
+/* ── PATENTS ── */
+.dic-patent-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1px;
+  background: #ddd;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.dic-patent {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 18px 20px;
+  background: #FAF4EC;
+  transition: padding-left 0.2s, background 0.2s;
+}
+
+.dic-patent:hover {
+  padding-left: 28px;
+  background: #f0ece4;
+}
+
+.dic-patent-name {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #23262E;
+  line-height: 1.3;
+}
+
+.dic-patent-inv {
+  font-family: Avenir, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .dic-patent-grid { grid-template-columns: 1fr; }
+}
+
+/* ── PILL GRID (Courses + Partners) ── */
+.dic-pill-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.dic-pill {
+  font-family: Avenir, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #555;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 100px;
+  padding: 8px 18px;
+  transition: border-color 0.2s, color 0.2s, transform 0.25s cubic-bezier(.16,1,.3,1);
+  cursor: default;
+}
+
+.dic-pill:hover {
+  border-color: #0057FF;
+  color: #0057FF;
+  transform: translateY(-2px);
+}
+
+.dic-pill--partner {
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: #888;
+}
+
+.dic-pill--partner:hover {
+  border-color: #00FF33;
+  color: #23262E;
+}
+
+/* ── ANIMATION ── */
+@keyframes dicFadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

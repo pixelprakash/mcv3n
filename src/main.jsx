@@ -9,6 +9,7 @@ const Home           = lazy(() => import('./pages/Home'));
 const Venue          = lazy(() => import('./pages/Venue'));
 const Contact        = lazy(() => import('./pages/Contact'));
 const ImportantDates = lazy(() => import('./pages/ImportantDates'));
+const DIC            = lazy(() => import('./pages/DIC'));
 
 /* ── Minimal loader shown while chunks download ── */
 function PageLoader() {
@@ -29,6 +30,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Route path="venue" element={<Venue />} />
             <Route path="contact" element={<Contact />} />
             <Route path="important-dates" element={<ImportantDates />} />
+            <Route path="dic" element={<DIC />} />
           </Route>
         </Routes>
       </Suspense>

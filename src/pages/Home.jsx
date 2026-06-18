@@ -4,6 +4,10 @@ import React from 'react';
 import '../App.css';
 /* Then import the padding override for ticker offset */
 import '../styles/home.css';
+import KeynoteSpeakers from '../components/KeynoteSpeakers';
+
+
+import HeroParticle from '../components/HeroParticle';
 
 import img1 from '../assets/1.jpg';
 import img2 from '../assets/2.jpg';
@@ -13,12 +17,12 @@ import img5 from '../assets/5.jpg';
 import img6 from '../assets/6.jpg';
 import img7 from '../assets/7.jpg';
 import img8 from '../assets/8.jpg';
-import timg from '../assets/tailimg.png';
+import timg from '../assets/tailimg.webp';
 import org1 from '../assets/org1.png';
 import org2 from '../assets/org2.png';
 import org3 from '../assets/org3.png';
 
-const REGISTER_URL = 'https://events.humanitix.com/6th-msc';
+const REGISTER_URL = 'https://forms.cloud.microsoft/r/xH1YXgeYGR';
 
 export default function Home() {
   return (
@@ -26,16 +30,17 @@ export default function Home() {
       <div className="main-content-wrapper">
         {/* Hero */}
         <div className="hero">
-          <h1>Go Mobile,</h1>
-          <h1>Stay Connected</h1>
+           <HeroParticle />
           <h2>6th Mobile Studies Congress</h2>
           <h1 style={{ color: '#0F3' }}>August 21-22, 2026</h1>
           <h2>Venue: Indian Institute of Technology Hyderabad, India</h2>
+          </div>
 
-          <a href="https://events.humanitix.com/6th-msc">
+        {/* 
+          <a href="https://forms.cloud.microsoft/r/xH1YXgeYGR">
             <button className="cool-btn">Register Now</button>
           </a>
-        </div>
+         */}
 
         {/* Carousel */}
         <div className="bootstrap-scope">
@@ -82,6 +87,7 @@ export default function Home() {
             The 6th Mobile Studies Congress invites researchers, creative practitioners, designers, filmmakers, and industry professionals to submit papers and proposals for presentations, workshops, screenings, showcases, and panel discussions on the theme <span style={{ color: '#0057FF', fontFamily: 'Cabinet Grotesk', fontWeight: 700 }}>"Go Mobile, Stay Connected".</span> This annual event examines the transformative impact of mobile media, cellphilming and smart technologies on our lives, society and creative industries. The congress will explore new ways to connect with culture, country, and communities. The 6th Mobile Studies Congress will also feature a screening of the Mobile Innovation Networks and Association (MINA) smartphone film festival. Selected conference papers and projects will be published in a special issue.
           </p>
         </div>
+        <KeynoteSpeakers />
 
         {/* Areas of Interest */}
         <div className="AreasofInterest">
@@ -140,39 +146,44 @@ export default function Home() {
               </ul>
             </li>
           </ul>
-        </div>
 
-        {/* Submission Guidelines */}
-        <div id="guidelines-section">
-          <h2 className="heading2" style={{ color: '#000' }}> Submission Guidelines </h2>
-          <ol className="listofint">
-            <li>Abstracts should be kept within 300 words</li>
-            <li>Submissions must be original and not previously presented or published.</li>
-            <li>Please follow the APA style, the 7th edition</li>
-            <li>All submissions will undergo a double-blind peer review process.</li>
-          </ol>
+          {/* Presentation Guidelines */}
+          <div className="format-guidelines-section">
+            <h2 className="heading2" style={{ color: '#000' }}> Presentation Guidelines </h2>
+            <p className="format-guidelines-intro">All submissions should be made via our official submission portal, which will be emailed to all successfully registered applicants.</p>
 
-          <div className="button-container">
-            <a href="https://forms.cloud.microsoft/r/RhZq0aqFX0">
-              <button className="down-btn">Submit your abstract</button>
-            </a>
-            <a href="https://filmfreeway.com/mina">
-              <button className="down-btn">Submit your Mobile story / Cellphilm / Smartphone film</button>
-            </a>
+            <div className="format-guidelines">
+              <div className="format-guideline-card">
+                <h4>1. Online / Offline Presentations</h4>
+                <p className="format-deadline">Deadline: UTC 11:59 PM — 31st July, 2026</p>
+                <p>You will be allotted a time-slot of 15 minutes for presentation and 5 minutes dedicated to any Q&A. In addition to the presentation file, please submit a camera-ready video recording of the respective authors presenting the slides as well.</p>
+                <p><strong style={{ color: '#CC1400' }}>*Submitting the camera-ready presentation is mandatory.</strong></p>
+                <p className="format-naming">Please name your files as:<br />
+                  <code>AuthorName_Title_Category.pptx</code> and <code>AuthorName_Title_Category.mp4</code><br />
+                  <span style={{ color: '#666', fontSize: '0.9em' }}>(e.g., Lee_TextualMobility_Online.pptx)</span>
+                </p>
+                <a href="https://docs.google.com/presentation/d/1KkvKo7iSvodOpRgp3-x97YVrowxHzFqV6huHVP8fLUQ/" target="_blank" rel="noopener noreferrer" className="down-btn">
+                  Download Presentation Template (.pptx)
+                </a>
+              </div>
+
+              <div className="format-guideline-card">
+                <h4>2. Poster Presentation</h4>
+                <p className="format-deadline">Deadline: UTC 11:59 PM — 31st July, 2026</p>
+                <p>Poster Presentations must adhere to a maximum size of A1, made in a vertical orientation and strictly adhere to the provided template.</p>
+                <p>On request, we will be happy to send you a template for Adobe InDesign, Adobe Illustrator, and Canva Affinity.</p>
+                <p>The Department of Design also offers on-site printing on a pre-booking basis. If you would like to print and receive the poster through us, kindly select the option on the registration link.</p>
+                <a href="https://docs.google.com/presentation/d/1ZjUmtFMmn_79ViWO7_drnVdTSu-Mk1FS/" target="_blank" rel="noopener noreferrer" className="down-btn">
+                  Download Poster Template (.pptx)
+                </a>
+              </div>
+
+              <div className="format-guideline-card">
+                <h4>3. Full Paper Submission</h4>
+                <p>Selected papers will be provided an opportunity to be published in an edited volume by reputed publishers. A separate email will be shared expressing the complete details of the full paper submission process.</p>
+              </div>
+            </div>
           </div>
-        </div>
-
-        {/* Important Dates (brief on home) */}
-        <div id="dates-section">
-          <h2 className="heading2" style={{ color: '#000' }}> Important Dates </h2>
-          <hr />
-          <p>Abstract Submission Deadline: <span className="redd">20th March, 2026</span></p>
-          <hr />
-          <p>Notification of Acceptance: 1st April, 2026</p>
-          <hr />
-          <p>
-            <span className="blued">Join us</span> for this dynamic gathering at the Indian Institute of Technology Hyderabad, where thought leaders from around the globe will share insights, research, and innovations in mobile studies, mobile creative practice and cellphilms. Let us come together to shape the future of mobile connectivity, creativity and collaboration.
-          </p>
         </div>
 
         {/* Organizers / Contact (brief on home) */}
