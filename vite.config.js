@@ -5,5 +5,12 @@ export default defineConfig({
   plugins: [react()],
   build: {
     modulePreload: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          spline: ['@splinetool/react-spline'],
+        },
+      },
+    },
   },
 });
